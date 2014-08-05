@@ -26,5 +26,12 @@ describe Contacts do
     contacts.add_address(address)
     expect(contacts.address).to eq ['123 Stoney Way']
   end
+
+  it "adds an email address to the contact" do
+    contacts = Contacts.new('Steve Mason')
+    email = "stevem@gmail.com"
+    contacts.add_email(email)
+    expect(contacts.email).to eq ['stevem@gmail.com']
+  end
 end
 
