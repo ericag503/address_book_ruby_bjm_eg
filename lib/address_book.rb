@@ -1,4 +1,9 @@
 class Contacts
+
+  attr_reader:name, :phone, :address, :email
+
+
+    @@all_contacts = []
   def initialize(name)
     @name = name
     @phone = []
@@ -6,20 +11,12 @@ class Contacts
     @email = []
   end
 
-  def name
-    @name
+  def Contacts.all
+    @@all_contacts
   end
 
-  def phone
-    @phone
-  end
-
-  def address
-    @address
-  end
-
-  def email
-    @email
+  def save
+    @@all_contacts << self
   end
 
   def add_phone(phone)
